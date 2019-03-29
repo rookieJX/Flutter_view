@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Flutter/Flutter.h>
+#import "BaiDuView.h"
 
 
 @interface NativeViewFactory : NSObject<FlutterPlatformViewFactory>
@@ -21,6 +22,8 @@
 @property (nonatomic,strong) UILabel * indicatorLabel;
 /** 按钮 */
 @property (nonatomic,strong) UIButton * indicatorButton;
+/** 百度地图 */
+@property (nonatomic,strong) BaiDuView * baiduView;
 @end
 
 

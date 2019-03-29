@@ -63,18 +63,21 @@
         _indicator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 380, 500)];
         _indicator.backgroundColor  = [UIColor blueColor];
         
-        _indicatorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 360, 230)];
+        _indicatorLabel = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 360, 100)];
         _indicatorLabel.backgroundColor   = [UIColor orangeColor];
         _indicatorLabel.textAlignment   = NSTextAlignmentCenter;
         _indicatorLabel.text  = @"这里是iOS原生界面";
         [_indicator addSubview:_indicatorLabel];
         
         _indicatorButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _indicatorButton.frame  = CGRectMake(10, 260, 360, 230);
+        _indicatorButton.frame  = CGRectMake(10, 120, 360, 100);
         _indicatorButton.backgroundColor    = [UIColor magentaColor];
         [_indicatorButton setTitle:@"这里是iOS原生按钮" forState:UIControlStateNormal];
         [_indicatorButton addTarget:self action:@selector(actionForButton) forControlEvents:UIControlEventTouchUpInside];
         [_indicator addSubview:_indicatorButton];
+        
+        _baiduView  = [[BaiDuView alloc] initWithFrame:CGRectMake(10, 230, 360, 260)];
+        [_indicator addSubview:_baiduView];
         
         _viewId = viewId;
     }
